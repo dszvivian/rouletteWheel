@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/fragmentSplashScreen">
+
+    <fragment
+        android:id="@+id/fragment_spinwheel"
+        android:name="com.example.spingame.Fragment_spinwheel"
+        android:label="Fragment_spinwheel" />
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.spingame.FragmentHome"
+        android:label="FragmentHome" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragment_spinwheel"
+            app:destination="@id/fragment_spinwheel" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentScratchCard"
+            app:destination="@id/fragmentScratchCard" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentQuiz"
+            app:destination="@id/fragmentQuiz" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentScratchCard"
+        android:name="com.example.spingame.FragmentScratchCard"
+        android:label="FragmentScratchCard" />
+    <fragment
+        android:id="@+id/fragmentQuiz"
+        android:name="com.example.spingame.FragmentQuiz"
+        android:label="FragmentQuiz" />
+    <fragment
+        android:id="@+id/fragmentSplashScreen"
+        android:name="com.example.spingame.FragmentSplashScreen"
+        android:label="FragmentSplashScreen" >
+        <action
+            android:id="@+id/action_fragmentSplashScreen_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_fragmentSplashScreen_to_fragmentSignIn"
+            app:destination="@id/fragmentSignIn" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSignIn"
+        android:name="com.example.spingame.FragmentSignIn"
+        android:label="FragmentSignIn" >
+        <action
+            android:id="@+id/action_fragmentSignIn_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+</navigation>
